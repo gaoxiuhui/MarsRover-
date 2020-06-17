@@ -14,5 +14,5 @@ mvn test -U
 ![gralde命令执行截图](gradle.jpg)
 ```bash
 gradle test
-./gradle test
+./gradlew test
 ```
