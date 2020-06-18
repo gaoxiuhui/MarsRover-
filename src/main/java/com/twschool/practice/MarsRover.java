@@ -2,19 +2,35 @@ package com.twschool.practice;
 
 public class MarsRover {
 
-    public String left(String direction) {
-        if(direction=="N") return "W";
-        if(direction=="W") return "S";
-        if(direction=="S") return "E";
-        if(direction=="E") return "N";
-        return "direction is error";
+    private final MarsRoverPostion marsRoverPostion;
+
+    public MarsRover(MarsRoverPostion marsRoverPostion) {
+        this.marsRoverPostion=marsRoverPostion;
     }
 
-    public String right(String direction) {
-        if(direction=="N") return "E";
-        if(direction=="W") return "N";
-        if(direction=="S") return "W";
-        if(direction=="E") return "S";
-        return "direction is error";
+
+    public void receive(String command) {
+        if(command.equals("L")){
+            if(marsRoverPostion.getDirection().equals("N")){
+                marsRoverPostion.setDirection("W");
+            }else if(marsRoverPostion.getDirection().equals("W")){
+                marsRoverPostion.setDirection("S");
+            }else if(marsRoverPostion.getDirection().equals("S")){
+                marsRoverPostion.setDirection("E");
+            }else if(marsRoverPostion.getDirection().equals("E")){
+                marsRoverPostion.setDirection("N");
+            }
+        }else if(command.equals("R")){
+            if(marsRoverPostion.getDirection().equals("N")){
+                marsRoverPostion.setDirection("E");
+            }else if(marsRoverPostion.getDirection().equals("E")){
+                marsRoverPostion.setDirection("S");
+            }else if(marsRoverPostion.getDirection().equals("S")){
+                marsRoverPostion.setDirection("W");
+            }else if(marsRoverPostion.getDirection().equals("W")){
+                marsRoverPostion.setDirection("N");
+            }
+        }
     }
+
 }
