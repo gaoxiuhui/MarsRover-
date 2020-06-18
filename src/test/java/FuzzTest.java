@@ -74,4 +74,14 @@ public class FuzzTest {
         Assert.assertEquals("BuzzWhizz",result);
     }
 
+    @Test
+    public void  should_return_FizzBuzzWhizz_given_number_105(){
+        //given
+        FuzzBuzz fizzBuzz =new FuzzBuzz();
+        //when
+        String result=fizzBuzz.say(105);
+        //then
+        Assert.assertEquals("FizzBuzzWhizz",result);
+    }
+
 }
