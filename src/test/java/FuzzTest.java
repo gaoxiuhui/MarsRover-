@@ -53,4 +53,15 @@ public class FuzzTest {
         //then
         Assert.assertEquals("FizzBuzz",result);
     }
+
+    @Test
+    public void  should_return_FizzWhizz_given_number_21(){
+        //given
+        FuzzBuzz fizzBuzz =new FuzzBuzz();
+        //when
+        String result=fizzBuzz.say(21);
+        //then
+        Assert.assertEquals("FFizzWhizz",result);
+    }
+
 }
