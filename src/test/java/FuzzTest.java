@@ -33,4 +33,14 @@ public class FuzzTest {
         //then
         Assert.assertEquals("Buzz",result);
     }
+
+    @Test
+    public void  should_return_Buzz_given_number_7(){
+        //given
+        FuzzBuzz fizzBuzz =new FuzzBuzz();
+        //when
+        String result=fizzBuzz.say(7);
+        //then
+        Assert.assertEquals("Whizz",result);
+    }
 }
