@@ -2,7 +2,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FuzzTest {
-    private Object asssertThat;
 
     @Test
     public void  should_return_1_given_number_1(){
@@ -15,7 +14,7 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_Fizz_given_number_3(){
+    public void  should_return_Fizz_given_number_can_be_divided_by_3(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
@@ -25,7 +24,7 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_Buzz_given_number_5(){
+    public void  should_return_Buzz_given_number_can_be_divided_by_5(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
@@ -35,7 +34,7 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_Whizz_given_number_7(){
+    public void  should_return_Whizz_given_number_can_be_divided_by_7(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
@@ -45,7 +44,7 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_FizzBuzz_given_number_15(){
+    public void  should_return_FizzBuzz_given_number_can_be_divided_by_3_and_5(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
@@ -55,7 +54,7 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_FizzWhizz_given_number_21(){
+    public void  should_return_FizzWhizz_given_number_can_be_divided_by_3_and_7(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
@@ -65,17 +64,17 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_BuzzWhizz_given_number_35(){
+    public void  should_return_BuzzWhizz_given_number_can_be_divided_by_5_and_7(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
-        String result=fizzBuzz.say(35);
+        String result=fizzBuzz.say(70);
         //then
         Assert.assertEquals("BuzzWhizz",result);
     }
 
     @Test
-    public void  should_return_FizzBuzzWhizz_given_number_105(){
+    public void  should_return_FizzBuzzWhizz_given_number_can_be_divided_by_3_and_5_and_7(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
@@ -85,7 +84,7 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_Fizz_given_number_13(){
+    public void  should_return_Fizz_given_number_contains_3(){
         //given 输入
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when 调用方法
@@ -95,7 +94,7 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_Fizz_given_number_30(){
+    public void  should_return_Fizz_given_number_contains_3_can_be_divided_by_5_and_3(){
         //given 输入
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when 调用方法
@@ -103,5 +102,7 @@ public class FuzzTest {
         //then 断言测试结果
         Assert.assertEquals("Fizz",result);
     }
+
+
 
 }
