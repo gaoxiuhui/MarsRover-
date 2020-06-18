@@ -30,6 +30,16 @@ public class MarsRover {
             }else if(marsRoverPostion.getDirection().equals("W")){
                 marsRoverPostion.setDirection("N");
             }
+        }else if(command.equals("M")){
+            if(marsRoverPostion.getDirection().equals("N")){
+                marsRoverPostion.setCoordinateY(marsRoverPostion.getCoordinateY()+1);
+            }else if(marsRoverPostion.getDirection().equals("S")){
+                marsRoverPostion.setCoordinateY(marsRoverPostion.getCoordinateY()-1);
+            }else if(marsRoverPostion.getDirection().equals("E")){
+                marsRoverPostion.setCoordinateX(marsRoverPostion.getcoordinateX()+1);
+            }else if(marsRoverPostion.getDirection().equals("W")){
+                marsRoverPostion.setCoordinateX(marsRoverPostion.getcoordinateX()-1);
+            }
         }
     }
 
