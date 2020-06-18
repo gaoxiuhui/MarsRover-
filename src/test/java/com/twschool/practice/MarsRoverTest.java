@@ -19,4 +19,18 @@ public class MarsRoverTest {
         Assert.assertEquals(0,coordinate.y);
     }
 
+    @Test
+    public void  should_return_coordinate_0_0_direction_E_given_coordinate_0_0_direction_N(){
+        //given
+        MarsRover marsRover =new MarsRover();
+        String direction="N";
+        Coordinate coordinate= new Coordinate(0,0);
+        //when
+        String dir_result=marsRover.right(direction);
+        //then
+        Assert.assertEquals("E",dir_result);
+        Assert.assertEquals(0,coordinate.x);
+        Assert.assertEquals(0,coordinate.y);
+    }
+
 }

@@ -9,4 +9,12 @@ public class MarsRover {
         if(direction=="E") return "N";
         return "direction is error";
     }
+
+    public String right(String direction) {
+        if(direction=="N") return "E";
+        if(direction=="W") return "N";
+        if(direction=="S") return "W";
+        if(direction=="E") return "S";
+        return "direction is error";
+    }
 }
