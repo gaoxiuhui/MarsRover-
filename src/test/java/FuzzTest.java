@@ -48,7 +48,7 @@ public class FuzzTest {
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
-        String result=fizzBuzz.say(15);
+        String result=fizzBuzz.say(60);
         //then
         Assert.assertEquals("FizzBuzz",result);
     }
@@ -68,7 +68,7 @@ public class FuzzTest {
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
-        String result=fizzBuzz.say(70);
+        String result=fizzBuzz.say(140);
         //then
         Assert.assertEquals("BuzzWhizz",result);
     }
@@ -78,7 +78,7 @@ public class FuzzTest {
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
-        String result=fizzBuzz.say(105);
+        String result=fizzBuzz.say(210);
         //then
         Assert.assertEquals("FizzBuzzWhizz",result);
     }
@@ -111,6 +111,16 @@ public class FuzzTest {
         String result=fizzBuzz.say(35);
         //then 断言测试结果
         Assert.assertEquals("BuzzWhizz",result);
+    }
+
+    @Test
+    public void  should_return_Fizz_given_number_contains_7_can_be_divided_by_5(){
+        //given 输入
+        FuzzBuzz fizzBuzz =new FuzzBuzz();
+        //when 调用方法
+        String result=fizzBuzz.say(75);
+        //then 断言测试结果
+        Assert.assertEquals("Fizz",result);
     }
 
 
