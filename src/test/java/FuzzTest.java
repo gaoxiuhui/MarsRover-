@@ -84,4 +84,14 @@ public class FuzzTest {
         Assert.assertEquals("FizzBuzzWhizz",result);
     }
 
+    @Test
+    public void  should_return_Fizz_given_number_13(){
+        //given 输入
+        FuzzBuzz fizzBuzz =new FuzzBuzz();
+        //when 调用方法
+        String result=fizzBuzz.say(13);
+        //then 断言测试结果
+        Assert.assertEquals("Fizz",result);
+    }
+
 }
