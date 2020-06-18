@@ -1,7 +1,9 @@
 public class FuzzBuzz {
 
     public String say(int  number) {
-        if(number % 3==0 && number % 5==0 && number % 7==0){
+        if(String.valueOf(number).contains("3")){
+            return "Fizz";
+        }else if(number % 3==0 && number % 5==0 && number % 7==0){
             return "FizzBuzzWhizz";
         }else if(number % 3==0 && number % 5==0){
             return "FizzBuzz";
