@@ -35,12 +35,22 @@ public class FuzzTest {
     }
 
     @Test
-    public void  should_return_Buzz_given_number_7(){
+    public void  should_return_Whizz_given_number_7(){
         //given
         FuzzBuzz fizzBuzz =new FuzzBuzz();
         //when
         String result=fizzBuzz.say(7);
         //then
         Assert.assertEquals("Whizz",result);
+    }
+
+    @Test
+    public void  should_return_FizzBuzz_given_number_15(){
+        //given
+        FuzzBuzz fizzBuzz =new FuzzBuzz();
+        //when
+        String result=fizzBuzz.say(15);
+        //then
+        Assert.assertEquals("FizzBuzz",result);
     }
 }
