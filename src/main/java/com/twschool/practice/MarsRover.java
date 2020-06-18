@@ -10,35 +10,55 @@ public class MarsRover {
 
 
     public void receive(String command) {
+        //向左转
         if(command.equals("L")){
-            if(marsRoverPostion.getDirection().equals("N")){
-                marsRoverPostion.setDirection("W");
-            }else if(marsRoverPostion.getDirection().equals("W")){
-                marsRoverPostion.setDirection("S");
-            }else if(marsRoverPostion.getDirection().equals("S")){
-                marsRoverPostion.setDirection("E");
-            }else if(marsRoverPostion.getDirection().equals("E")){
-                marsRoverPostion.setDirection("N");
+            switch(marsRoverPostion.getDirection()){
+                case "N":
+                    marsRoverPostion.setDirection("W");
+                    break;
+                case "W":
+                    marsRoverPostion.setDirection("S");
+                    break;
+                case "S":
+                    marsRoverPostion.setDirection("E");
+                    break;
+                case "E":
+                    marsRoverPostion.setDirection("N");
+                    break;
             }
-        }else if(command.equals("R")){
-            if(marsRoverPostion.getDirection().equals("N")){
-                marsRoverPostion.setDirection("E");
-            }else if(marsRoverPostion.getDirection().equals("E")){
-                marsRoverPostion.setDirection("S");
-            }else if(marsRoverPostion.getDirection().equals("S")){
-                marsRoverPostion.setDirection("W");
-            }else if(marsRoverPostion.getDirection().equals("W")){
-                marsRoverPostion.setDirection("N");
+        }
+        //向右转
+        else if(command.equals("R")){
+            switch(marsRoverPostion.getDirection()){
+                case "N":
+                    marsRoverPostion.setDirection("E");
+                    break;
+                case "E":
+                    marsRoverPostion.setDirection("S");
+                    break;
+                case "S":
+                    marsRoverPostion.setDirection("W");
+                    break;
+                case "W":
+                    marsRoverPostion.setDirection("N");
+                    break;
             }
-        }else if(command.equals("M")){
-            if(marsRoverPostion.getDirection().equals("N")){
-                marsRoverPostion.setCoordinateY(marsRoverPostion.getCoordinateY()+1);
-            }else if(marsRoverPostion.getDirection().equals("S")){
-                marsRoverPostion.setCoordinateY(marsRoverPostion.getCoordinateY()-1);
-            }else if(marsRoverPostion.getDirection().equals("E")){
-                marsRoverPostion.setCoordinateX(marsRoverPostion.getcoordinateX()+1);
-            }else if(marsRoverPostion.getDirection().equals("W")){
-                marsRoverPostion.setCoordinateX(marsRoverPostion.getcoordinateX()-1);
+        }
+        //向前移动
+        else if(command.equals("M")){
+            switch(marsRoverPostion.getDirection()){
+                case "N":
+                    marsRoverPostion.setCoordinateY(marsRoverPostion.getCoordinateY()+1);
+                    break;
+                case "S":
+                    marsRoverPostion.setCoordinateY(marsRoverPostion.getCoordinateY()-1);
+                    break;
+                case "E":
+                    marsRoverPostion.setCoordinateX(marsRoverPostion.getcoordinateX()+1);
+                    break;
+                case "W":
+                    marsRoverPostion.setCoordinateX(marsRoverPostion.getcoordinateX()-1);
+                    break;
             }
         }
     }
