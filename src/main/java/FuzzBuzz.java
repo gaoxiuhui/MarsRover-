@@ -1,24 +1,23 @@
 public class FuzzBuzz {
 
     public String say(int  number) {
+        String res="";
         if(String.valueOf(number).contains("3")){
             return "Fizz";
-        }else if(number % 3==0 && number % 5==0 && number % 7==0){
-            return "FizzBuzzWhizz";
-        }else if(number % 3==0 && number % 5==0){
-            return "FizzBuzz";
-        }else if(number % 3==0 && number % 7==0){
-            return "FizzWhizz";
-        }else if(number % 5==0 && number % 7==0){
-            return "BuzzWhizz";
-        }else if(number % 3==0 ){
-            return "Fizz";
-        }else if(number % 5==0){
-            return "Buzz";
-        }else if(number % 7==0){
-            return "Whizz";
-        }else{
+        }
+        if(isDivided(number,3) ){
+            res+="Fizz";
+        } if(isDivided(number,5)){
+            res+="Buzz";
+        } if(isDivided(number,7)){
+            res+="Whizz";
+        }if(!isDivided(number,3) && !isDivided(number,5)&& !isDivided(number,7)){
             return String.valueOf(number);
         }
+         return res;
+    }
+
+    private Boolean isDivided (int number1 ,int number2){
+        return (number1 % number2 ==0);
     }
 }
