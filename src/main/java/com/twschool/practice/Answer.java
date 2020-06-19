@@ -1,32 +1,26 @@
 package com.twschool.practice;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Answer {
+    private final List<String> answerNumbers;
 
-    public static String check(int[] gameAnswer,int[] userAnswer){
-         int Anum=getANumber(gameAnswer,userAnswer);
-         int Bnum=getBNumber(gameAnswer,userAnswer);
-         return ""+Anum+"A"+Bnum+"B";
+    public Answer (String answerString){
+        this.answerNumbers= Arrays.asList(answerString.split(" "));
     }
-    //获得A前面的数字
-    private static int getANumber(int[] gameAnswer,int[] userAnswer){
-        int ANumber =0;
-        for(int i=0;i<gameAnswer.length;i++){
-            if(gameAnswer[i]==userAnswer[i])
-                ANumber++;
-        }
-        return ANumber;
+    public  String check(String userAnswerString){
+         List<String> userAnswerNumbers=Arrays.asList(userAnswerString.split(" "));
+         int valueAndPositionCorrCount=0;
+         int  valueCorrPositionNotCorrCount=0;
+         for (int i=0;i<answerNumbers.size();i++){
+             if(answerNumbers.get(i).equals(userAnswerNumbers.get(i))){
+                 valueAndPositionCorrCount++;
+             }else if(answerNumbers.contains(userAnswerNumbers.get(i))){
+                 valueCorrPositionNotCorrCount++;
+             }
+         }
+         return valueAndPositionCorrCount+"A"+valueCorrPositionNotCorrCount+"B";
     }
 
-    //获得B前面的数字
-    private static int getBNumber(int[] gameAnswer,int[] userAnswer){
-        int BNumber =0;
-        for(int i=0;i<gameAnswer.length;i++){
-            for(int j=0;j<userAnswer.length;j++){
-                if(i==j) continue;
-                if(gameAnswer[i]==userAnswer[j])
-                    BNumber++;
-            }
-        }
-        return BNumber;
-    }
 }
