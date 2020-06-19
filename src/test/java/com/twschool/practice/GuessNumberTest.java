@@ -49,4 +49,15 @@ public class GuessNumberTest {
         Assert.assertEquals("0A4B",result);
     }
 
+    @Test
+    public void should_return_0_A_3_B_when_check_given_number_part_corr_position_all_not_corr(){
+        //given
+        int[] gameAnswer ={1,2,3,4};
+        int[] userAnswer ={2,3,4,5};
+        //when
+        String  result=Answer.check(gameAnswer,userAnswer);
+        //then
+        Assert.assertEquals("0A3B",result);
+    }
+
 }
