@@ -2,11 +2,11 @@ package com.twschool.practice;
 
 public class MarsRoverPostion {
 
-    private  String direction;
+    public Direction direction;
     private  int coordinateY;
     private int coordinateX;
 
-    public MarsRoverPostion(int coordinateX, int coordinateY, String direction) {
+    public MarsRoverPostion(int coordinateX, int coordinateY, Direction direction) {
 
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
@@ -19,7 +19,7 @@ public class MarsRoverPostion {
     public void setCoordinateY(int coordinateY){
         this.coordinateY=coordinateY;
     }
-    public void setDirection(String direction){
+    public void setDirection(Direction direction){
         this.direction=direction;
     }
     public int getcoordinateX()
@@ -30,58 +30,32 @@ public class MarsRoverPostion {
         return coordinateY;
     }
 
-    public String getDirection(){
+    public Direction getDirection(){
         return direction;
     }
 
     public void move() {
         switch(getDirection()){
-            case "N":
+            case N:
                 setCoordinateY(getCoordinateY()+1);
                 break;
-            case "S":
+            case S:
                 setCoordinateY(getCoordinateY()-1);
                 break;
-            case "E":
+            case E:
                 setCoordinateX(getcoordinateX()+1);
                 break;
-            case "W":
+            case W:
                 setCoordinateX(getcoordinateX()-1);
                 break;
         }
     }
 
     public void turnRight() {
-        switch(getDirection()){
-            case "N":
-                setDirection("E");
-                break;
-            case "E":
-                setDirection("S");
-                break;
-            case "S":
-                setDirection("W");
-                break;
-            case "W":
-                setDirection("N");
-                break;
-        }
+        setDirection(getDirection().rightDirection());
     }
 
     public void turnLeft() {
-        switch(getDirection()){
-            case "N":
-                setDirection("W");
-                break;
-            case "W":
-                setDirection("S");
-                break;
-            case "S":
-                setDirection("E");
-                break;
-            case "E":
-                setDirection("N");
-                break;
-        }
+        setDirection(getDirection().leftDirection());
     }
 }

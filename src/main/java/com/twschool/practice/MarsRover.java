@@ -9,7 +9,7 @@ public class MarsRover {
     }
 
 
-    public void receive(String command) {
+    public MarsRoverPostion receive(String command) {
         //向左转
         if(command.equals("L")){
             marsRoverPostion.turnLeft();
@@ -22,6 +22,7 @@ public class MarsRover {
         else if(command.equals("M")){
             marsRoverPostion.move();
         }
+        return marsRoverPostion;
     }
 
 
