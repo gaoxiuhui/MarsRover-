@@ -14,7 +14,7 @@ public class GuessNumberGame {
 
     public String guess(String userAnswerString) {
         String result= guessNumberAnswer.check(userAnswerString);
-        leftTryTime--;
+        leftTryTime=0;
         if("4A0B".equals(result)){
             gameStatus=GameStatus.SUCCESS;
         } else if(leftTryTime ==0){

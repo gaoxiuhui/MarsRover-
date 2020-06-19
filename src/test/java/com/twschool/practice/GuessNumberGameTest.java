@@ -50,4 +50,16 @@ public class GuessNumberGameTest {
         Assert.assertEquals(GameStatus.CONTINUE,gameStatus);
     }
 
+    @Test
+    public void should_return_failed_when_times_6_userAnswerString_1278_given_game_answerString_1234(){
+        //given
+        GuessNumberAnswer  guessNumberAnswer =new GuessNumberAnswer("1 2 3 4");
+        GuessNumberGame guessNumberGame =new GuessNumberGame(guessNumberAnswer);
+        guessNumberGame.guess("1 2 7 8");
+        //when
+        GameStatus gameStatus=guessNumberGame.getStatus();
+        //then
+        Assert.assertEquals(GameStatus.FAILED,gameStatus);
+    }
+
 }
