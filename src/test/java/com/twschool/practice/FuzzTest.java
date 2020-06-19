@@ -1,3 +1,6 @@
+package com.twschool.practice;
+
+import com.twschool.practice.FuzzBuzz;
 import org.junit.Assert;
 import org.junit.Test;
 
