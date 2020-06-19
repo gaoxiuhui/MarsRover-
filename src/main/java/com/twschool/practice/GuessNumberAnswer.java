@@ -3,10 +3,10 @@ package com.twschool.practice;
 import java.util.Arrays;
 import java.util.List;
 
-public class Answer {
+public class GuessNumberAnswer {
     private final List<String> answerNumbers;
 
-    public Answer (String answerString){
+    public GuessNumberAnswer(String answerString){
         this.answerNumbers= Arrays.asList(answerString.split(" "));
     }
     public  String check(String userAnswerString){
