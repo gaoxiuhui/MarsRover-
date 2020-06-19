@@ -37,16 +37,16 @@ public class MarsRoverPostion {
     public void move() {
         switch(getDirection()){
             case N:
-                setCoordinateY(getCoordinateY()+1);
+                coordinateY++;
                 break;
             case S:
-                setCoordinateY(getCoordinateY()-1);
+                coordinateY--;
                 break;
             case E:
-                setCoordinateX(getcoordinateX()+1);
+                coordinateX++;
                 break;
             case W:
-                setCoordinateX(getcoordinateX()-1);
+                coordinateX--;
                 break;
         }
     }

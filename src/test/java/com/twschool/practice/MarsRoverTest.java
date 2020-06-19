@@ -32,7 +32,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_y0_direction_N_given_coordinate_x0_y0_direction_E_command_L(){
+    public void  should_return_coordinate_x0_y0_direction_N_when_command_L_given_coordinate_x0_y0_direction_E(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.E);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -45,7 +45,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_y0_direction_S_given_coordinate_x0_y0_direction_W_command_L(){
+    public void  should_return_coordinate_x0_y0_direction_S_when_command_L_given_coordinate_x0_y0_direction_W(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.W);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -58,7 +58,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_y0_direction_E_given_coordinate_x0_y0_direction_N_command_R(){
+    public void  should_return_coordinate_x0_y0_direction_E_when_command_R_given_coordinate_x0_y0_direction_N(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.N);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -71,7 +71,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_y0_direction_W_given_coordinate_x0_y0_direction_S_command_R(){
+    public void  should_return_coordinate_x0_y0_direction_W_when_command_R_given_coordinate_x0_y0_direction_S(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.S);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -84,7 +84,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_y0_direction_S_given_coordinate_x0_y0_direction_E_command_R(){
+    public void  should_return_coordinate_x0_y0_direction_S_when_command_R_given_coordinate_x0_y0_direction_E(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.E);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -97,7 +97,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_y0_direction_N_given_coordinate_x0_y0_direction_W_command_R(){
+    public void  should_return_coordinate_x0_y0_direction_N_when_command_R_given_coordinate_x0_y0_direction_W(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.W);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -110,7 +110,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_y1_direction_N_given_coordinate_x0_y0_direction_N_command_M(){
+    public void  should_return_y_add_1_direction_N_when_command_M_given_coordinate_x0_y0_direction_N(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.N);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -123,7 +123,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x0_yf1_direction_S_given_coordinate_x0_y0_direction_S_command_M(){
+    public void  should_return_y_sub_1_direction_S_when_command_M_given_coordinate_x0_y0_direction_S(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.S);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -136,7 +136,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_x1_y0_direction_E_given_coordinate_x0_y0_direction_E_command_M(){
+    public void  should_return_x_add_1_direction_E_when_command_M_given_coordinate_x0_y0_direction_E(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.E);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
@@ -149,7 +149,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void  should_return_coordinate_xf1_y0_direction_W_given_coordinate_x0_y0_direction_W_command_M(){
+    public void  should_return_x_sub_1_direction_W_when_command_M_given_coordinate_x0_y0_direction_W(){
         //given
         MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,Direction.W);
         MarsRover marsRover =new MarsRover(marsRoverPostion);
