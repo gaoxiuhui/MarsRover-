@@ -33,4 +33,55 @@ public class MarsRoverPostion {
     public String getDirection(){
         return direction;
     }
+
+    public void move() {
+        switch(getDirection()){
+            case "N":
+                setCoordinateY(getCoordinateY()+1);
+                break;
+            case "S":
+                setCoordinateY(getCoordinateY()-1);
+                break;
+            case "E":
+                setCoordinateX(getcoordinateX()+1);
+                break;
+            case "W":
+                setCoordinateX(getcoordinateX()-1);
+                break;
+        }
+    }
+
+    public void turnRight() {
+        switch(getDirection()){
+            case "N":
+                setDirection("E");
+                break;
+            case "E":
+                setDirection("S");
+                break;
+            case "S":
+                setDirection("W");
+                break;
+            case "W":
+                setDirection("N");
+                break;
+        }
+    }
+
+    public void turnLeft() {
+        switch(getDirection()){
+            case "N":
+                setDirection("W");
+                break;
+            case "W":
+                setDirection("S");
+                break;
+            case "S":
+                setDirection("E");
+                break;
+            case "E":
+                setDirection("N");
+                break;
+        }
+    }
 }
