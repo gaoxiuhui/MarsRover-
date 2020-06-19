@@ -13,4 +13,9 @@ public class GuessNumberGame {
     public String guess(String userAnswerString) {
         return guessNumberAnswer.check(userAnswerString);
     }
+
+    public GameStatus getStatus() {
+
+        return GameStatus.SUCCESS;
+    }
 }
