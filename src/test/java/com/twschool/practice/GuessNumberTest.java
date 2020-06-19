@@ -60,4 +60,15 @@ public class GuessNumberTest {
         Assert.assertEquals("0A3B",result);
     }
 
+    @Test
+    public void should_return_0_A_0_B_when_check_given_number_all_not_corr_position_all_not_corr(){
+        //given
+        int[] gameAnswer ={1,2,3,4};
+        int[] userAnswer ={5,6,7,8};
+        //when
+        String  result=Answer.check(gameAnswer,userAnswer);
+        //then
+        Assert.assertEquals("0A0B",result);
+    }
+
 }
