@@ -12,9 +12,9 @@ public class GuessNumberGenerator {
             stringSet.add(String.valueOf(number));
         }
         for (String number:stringSet){
-            gameNumber+=number;
+            gameNumber=gameNumber+number+" ";
         }
-        return gameNumber;
+        return gameNumber.trim();
     }
 
 }
